@@ -1,4 +1,31 @@
+@media screen and (max-width: 1300px) {
+    .arrow-btn {
+        &.prev {
+            left: 10px;
+        }
+
+        &.next {
+            right: 10px;
+        }
+    }
+
+    .form_img {
+        img {
+            width: 105%;
+        }
+    }
+
+    .form {
+        padding: 60px 20px 60px 60px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
+
+    .tariff_form {
+        padding: 70px 100px;
+    }
+
     .nav_ul {
         &>*+* {
             margin-left: 15px;
@@ -65,6 +92,35 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .form_img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            position: static;
+            width: 100%;
+        }
+    }
+
+    .form_line {
+        flex-direction: column;
+
+        input {
+            width: 100%;
+            margin: 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+    }
+
+    .about_img {
+        margin-right: 40px;
+    }
+
     .why_grid {
         column-gap: 15px;
 
@@ -91,7 +147,7 @@
         margin: 0 10px;
     }
 
-    .form_section form {
+    .form_section .form {
         width: 80%;
     }
 
@@ -132,16 +188,6 @@
         width: unset;
     }
 
-    .about-wrapper {
-        flex-direction: column;
-        gap: 50px;
-    }
-
-    .about_img-box,
-    .about_img {
-        max-width: 100%;
-    }
-
     .body_title.underlined {
         font-size: 36px;
         padding-bottom: 12px;
@@ -158,6 +204,25 @@
 }
 
 @media screen and (max-width: 924px) {
+    .tariff_form {
+        width: 50%;
+        padding: 35px 50px;
+
+        .form_line {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    .arrow-btn {
+        display: none;
+    }
+
+    .certs_content {
+        margin-left: 40px;
+    }
+
+
     .advs_img {
         margin-right: 20px;
     }
@@ -217,21 +282,43 @@
 }
 
 @media screen and (max-width: 824px) {
+    .news-slide-content {
+        padding: 15px;
+    }
+
+    .about_img {
+        margin-right: 20px;
+    }
 
     .why_grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .why_card {
+        padding: 40px 45px;
 
         &:first-child {
-            border-radius: 0;
+            border-radius: 20px 20px 0 0;
         }
 
         &:last-child {
-            border-radius: 0;
+            border-radius: 0 0 20px 20px;
         }
 
         &:nth-child(even) {}
 
         &:nth-child(odd) {}
+    }
+
+    .why-arrow {
+        position: absolute;
+        right: unset !important;
+        left: 50%;
+        top: unset;
+        bottom: -21px;
+        transform: translateX(-50%) rotate(90deg);
+        z-index: 10;
     }
 
     .header_nav-contact-link {
@@ -255,13 +342,77 @@
 }
 
 @media screen and (max-width: 768px) {
+    .tariff_form {
+        margin-top: 35px;
+        width: 100%;
+    }
+
+    .tariff-page {
+        .about_img {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .certs-dots-mobile {
+        margin-top: 64px;
+    }
+
+    .certs-slider-wrap {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .scroll-link {
+        right: 10%;
+    }
+
+    .certs-dots .slick-dots {
+        justify-content: center !important;
+    }
+
+    .certs_wrapper.wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .certs_content {
+        margin-left: 0;
+    }
+
+    .certs_slider,
+    .certs_content {
+        width: 100%;
+    }
+
+    .form_img {
+        display: none;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .services-page {
+        .about_section:nth-child(even) .about_wrapper.wrapper {
+            flex-direction: column;
+        }
+    }
+
+    .about_img {
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
     .advs_img {
         width: 100%;
         margin: 0 0 35px 0;
     }
 
-    .form_section form {
+    .form_section .form {
         width: 100%;
+        max-width: 100%;
+        padding: 60px;
     }
 
     .form_line {
@@ -270,18 +421,6 @@
 
     #name-input {
         width: 50%;
-    }
-
-    .serts_wrapper.wrapper {
-        flex-direction: column-reverse;
-    }
-
-    .serts_section .serts_slider-box {
-        width: 100%;
-    }
-
-    .serts_slider-btns-box .slick-dots {
-        text-align: center;
     }
 
     .ceilings_content-float-box img {
@@ -293,9 +432,8 @@
     }
 
     .hero_content-title {
-        font-size: 40px;
-        line-height: 40px;
-        margin-bottom: 20px;
+        font-size: 60px;
+        line-height: 64px;
     }
 
     .header_nav-contact-link:first-child {
@@ -372,7 +510,7 @@
     }
 
     header.scrolled {
-        height: 70px;
+        height: 60px;
     }
 
     .wrapper {
@@ -435,6 +573,10 @@
 
 @media screen and (max-width: 650px) {
 
+    .certs_wrapper {
+        flex-direction: column-reverse;
+    }
+
     .header_nav-contact-link {
         &.third {
             display: none;
@@ -477,6 +619,10 @@
 
     .hero_section {
         height: 95vh;
+    }
+
+    .page-hero {
+        height: 40vh;
     }
 
     .hero-video {
@@ -616,6 +762,10 @@
 
 @media screen and (max-width: 500px) {
 
+    .scroll-link {
+        right: 10%;
+    }
+
     .header_nav-contact-link.sec {
         display: none;
     }
@@ -647,7 +797,8 @@
     }
 
     .hero_content-title {
-        font-size: 36px;
+        font-size: 46px;
+        line-height: 50px;
     }
 
 
@@ -681,6 +832,52 @@
 }
 
 @media screen and (max-width: 425px) {
+    .tariff_form {
+        padding: 20px;
+    }
+
+    .nav-mobile_ul {
+        .primary-btn {
+            width: 100%;
+        }
+    }
+
+    .certs-dots-mobile {
+        margin-top: 35px;
+    }
+
+    .slider-wrap {
+        margin-bottom: 35px;
+    }
+
+    .about_section button {
+        width: 100%;
+    }
+
+    .form_section .form {
+        padding: 60px 20px;
+
+        button {
+            width: 100%;
+        }
+    }
+
+    .scroll-link {
+        right: 10px;
+    }
+
+    .fixed-links-box {
+        right: 5px;
+    }
+
+    .fixed-link {
+        width: 35px;
+
+        &:last-child {
+            margin-top: 10px;
+        }
+    }
+
     .ceilings_content-float-box img {
         margin-bottom: -200px;
     }

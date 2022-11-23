@@ -88,22 +88,45 @@
     </header>
 
     <div class="nav-mobile">
-        <ul class="nav-mobile_ul">
+        <div class="nav-mobile-plank">
+            <button class="close-btn">
 
-            <li><a href="/">ГЛАВНАЯ</a></li>
-            <li><a href="/services">Предоставляемы услуги</a></li>
-            <li><a href="/tariff">Расчет тарифа</a></li>
-            <li><a href="/about">О компании</a></li>
-            <li><a href="/news">Новости</a></li>
-            <li><a href="/contacts">Контакты</a></li>
-        </ul>
+            </button>
+            <p>ЗАКРЫТЬ</p>
+        </div>
+        <div class="nav-mobile-wrap">
+            <ul class="nav-mobile_ul">
+
+                <li><a href="/">ГЛАВНАЯ</a></li>
+                <li><a href="/services">Предоставляемы услуги</a></li>
+                <li><a href="/tariff">Расчет тарифа</a></li>
+                <li><a href="/about">О компании</a></li>
+                <li><a href="/news">Новости</a></li>
+                <li><a href="/contacts">Контакты</a></li>
+                <li><button class="primary-btn small">Запрос на расчет</button></li>
+            </ul>
+
+            <div class="hero_side-mobile">
+                <div class="hero_side-links" data-aos="fade-left">
+                    <a href="https://wa.me/78881112233">
+                        <img src="/images/icons/wabl.svg" alt="">
+                    </a>
+                    <a href="https://instagram.org" data-aos="fade-left">
+                        <img src="/images/icons/instbl.svg" alt="">
+                    </a>
+                    <a href="mailto:" data-aos="fade-left">
+                        <img src="/images/icons/embl.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="fixed-links-box">
         <a href="tel:+77760073192" class="fixed-link">
             <img src="/images/icons/phone-btn.svg" alt="">
         </a>
-        <a href="https://wa.me/77760073192" class="fixed-link">
+        <a href="https://wa.me/77760073192" target="_blank" class="fixed-link">
             <img src="/images/icons/wa-btn.svg" alt="">
         </a>
     </div>
@@ -124,12 +147,12 @@
                         Расчет тарифа
                     </button>
                 </div>
-                <a href="" class="scroll-link">
-                    scroll down
-                    <img src="/images/icons/scroll-btn.svg" alt="">
-                </a>
-            </div>
 
+            </div>
+            <div class="scroll-link bounce">
+                scroll down
+                <img src="/images/icons/scroll-btn.svg" alt="">
+            </div>
         </section>
 
         <section class="why_section">
@@ -330,7 +353,7 @@
         <section class="form_section">
             <div class="container">
                 <div class="form_wrapper wrapper">
-                    <form action="">
+                    <form action="" class="form">
                         <div class="body_title-box">
                             <div class="body_title">
                                 Обратный звонок
@@ -509,19 +532,22 @@
         <section class="certs_section">
             <div class="container">
                 <div class="certs_wrapper wrapper">
-                    <div class="certs_slider">
-                        <a href="" class="certs-slide">
-                            <img src="/images/certs/certs1.png" alt="">
-                        </a>
-                        <a href="" class="certs-slide">
-                            <img src="/images/certs/certs1.png" alt="">
-                        </a>
-                        <a href="" class="certs-slide">
-                            <img src="/images/certs/certs1.png" alt="">
-                        </a>
-                        <a href="" class="certs-slide">
-                            <img src="/images/certs/certs1.png" alt="">
-                        </a>
+                    <div class="slider-wrap certs-slider-wrap">
+                        <div class="certs_slider">
+                            <a href="" class="certs-slide">
+                                <img src="/images/certs/certs1.png" alt="">
+                            </a>
+                            <a href="" class="certs-slide">
+                                <img src="/images/certs/certs1.png" alt="">
+                            </a>
+                            <a href="" class="certs-slide">
+                                <img src="/images/certs/certs1.png" alt="">
+                            </a>
+                            <a href="" class="certs-slide">
+                                <img src="/images/certs/certs1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="certs-dots-mobile dots"></div>
                     </div>
                     <div class="certs_content content">
                         <div class="body_title underlined left">

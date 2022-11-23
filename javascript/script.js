@@ -18,6 +18,12 @@ jQuery(document).ready(function () {
         $(this).setCursorPosition(3);
     });
 
+    $(".scroll-link").click(function () {
+        $('html, body').animate({
+            scrollTop: $(".why_section").offset().top - 100
+        }, 500);
+    });
+
     $(window).scroll(function () {
         if ($(document).scrollTop() > 15) {
             $("header").addClass("scrolled");
@@ -26,9 +32,17 @@ jQuery(document).ready(function () {
         }
     });
 
-    $(".menu-btn").click(function () {
-        $(".menu-btn").toggleClass("close")
+    $(".menu-btn, .nav-mobile-plank").click(function () {
+        // $(".menu-btn").toggleClass("close")
+        console.log('нажато уже')
         $(".nav-mobile").toggleClass("active")
+    })
+    $(".scroll-link").click(function () {
+        $(".nav-mobile").removeClass("active")
+        $(".menu-btn").toggleClass("close")
+    })
+    $(".call-btn").click(function () {
+        $(".modal-box").toggleClass("active");
     })
 
     $(".services_slider").slick({
@@ -36,10 +50,30 @@ jQuery(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         dots: true,
-        arrows: true,
+        arrows: false,
         prevArrow: $("#serv-prev"),
         nextArrow: $("#serv-next"),
-        appendDots: $(".serv-dots")
+        appendDots: $(".serv-dots"),
+        responsive: [
+            {
+                breakpoint: 924,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                }
+            },
+            {
+                breakpoint: 650,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                }
+            },
+        ]
     })
 
     $(".news_slider").slick({
@@ -50,17 +84,55 @@ jQuery(document).ready(function () {
         dots: true,
         prevArrow: $("#news-prev"),
         nextArrow: $("#news-next"),
-        appendDots: $(".news-dots")
+        appendDots: $(".news-dots"),
+        responsive: [
+            {
+                breakpoint: 924,
+                settings: {
+                    slidesToShow: 3,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                }
+            },
+            {
+                breakpoint: 720,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                }
+            },
+        ]
 
     })
 
     $('.certs_slider').slick({
-        infinite: false,
+        infinite: true,
         slidesToShow: 2,
         slidesToScroll: 1,
         arrows: false,
         dots: true,
         appendDots: $(".certs-dots"),
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    appendDots: $(".certs-dots-mobile"),
+
+                }
+            }
+        ]
     });
 
     $('#reviews_slider').slick({
@@ -89,6 +161,12 @@ jQuery(document).ready(function () {
             }
         ]
     });
+
+    $(".qs-btn").click(function (e) {
+        e.preventDefault();
+        $(this).parent().next().slideToggle(300);
+        $(this).toggleClass("dark")
+    })
 
 })
 
