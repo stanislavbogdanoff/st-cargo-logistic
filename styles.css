@@ -75,6 +75,7 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  transition: 0.2s;
 }
 a:hover {
   color: rgba(35, 35, 35, 0.7);
@@ -88,7 +89,7 @@ option {
   border: none;
   background: none;
   color: #000;
-  border-bottom: solid 1px #777777;
+  border-bottom: solid 1px rgb(165, 165, 165);
 }
 
 select:focus {
@@ -207,6 +208,7 @@ p {
 
 img {
   max-width: 100%;
+  object-fit: contain;
 }
 
 .body_logo {
@@ -507,7 +509,7 @@ header.scrolled .header_nav-right-line.top {
 }
 
 .nav-mobile_ul a {
-  font-size: 20px;
+  font-size: 18px;
   white-space: normal;
   font-weight: 500;
   text-transform: uppercase;
@@ -824,6 +826,10 @@ header.white-bg .menu-btn.close {
 }
 
 /********************************* ABOUT SECTION *********************************/
+.about-mobile-img {
+  display: none;
+}
+
 .about_img {
   max-width: 50%;
   border-radius: 20px;
@@ -916,15 +922,23 @@ header.white-bg .menu-btn.close {
 
 /************************************************* SERVICES PAGE *************************************************/
 .page-hero {
-  height: 60vh;
+  height: 55vh;
+}
+
+.page-hero .body_title.underlined {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 #serv-hero {
   background-image: url(images/pages/hero2.png);
 }
 
-.services-page .about_section {
-  margin-bottom: 100px;
+.services-page .about_section:nth-child(even) img {
+  margin: 0 0 0 110px;
 }
 .services-page .about_section:nth-child(even) .about_wrapper.wrapper {
   flex-direction: row-reverse;
@@ -1017,7 +1031,83 @@ header.white-bg .menu-btn.close {
   margin-top: 30px;
 }
 
-/************************************************* FOOTER SECTION ************************************************/
+/************************************************* ABOUT PAGE *************************************************/
+#about-hero {
+  background-image: url(/images/pages/hero4.png);
+}
+
+/************************************************* NEWS PAGE *************************************************/
+#news-hero {
+  background-image: url(/images/pages/hero5.png);
+}
+
+.news_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 32px;
+  row-gap: 32px;
+}
+
+/*********************************************** CONTACTS PAGE ***********************************************/
+#contacts-hero {
+  background-image: url(/images/pages/hero6.png);
+}
+
+.map iframe {
+  width: 100%;
+  border: none !important;
+}
+
+.contacts_row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 32px;
+  margin-bottom: 53px;
+}
+
+.contacts_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 60px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--black);
+  background-color: rgb(234, 234, 234);
+}
+.contacts_card:first-child {
+  white-space: unset;
+}
+.contacts_card.tel {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.contacts_card:hover {
+  background-color: var(--accent-dark);
+  color: #fff;
+}
+.contacts_card:hover .contacts_card-title {
+  color: rgb(197, 197, 197);
+}
+
+.contacts_card-title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 2px;
+  text-align: left;
+  color: rgb(115, 115, 115);
+}
+
+/*********************************************** FOOTER SECTION **********************************************/
 footer {
   color: #fff;
   background-color: var(--black);

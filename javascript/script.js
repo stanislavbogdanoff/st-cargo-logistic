@@ -50,7 +50,7 @@ jQuery(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         dots: true,
-        arrows: false,
+        arrows: true,
         prevArrow: $("#serv-prev"),
         nextArrow: $("#serv-next"),
         appendDots: $(".serv-dots"),
@@ -135,30 +135,31 @@ jQuery(document).ready(function () {
         ]
     });
 
-    $('#reviews_slider').slick({
-        infinite: false,
-        slidesToShow: 3,
+    $('.certs_slider-large').slick({
+        infinite: true,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         dots: true,
-        appendDots: $(".reviews_slider-btns-box"),
+        appendDots: $(".certs-dots-large"),
         responsive: [
             {
-                breakpoint: 924,
+                breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 3,
                     autoplay: true,
                     autoplaySpeed: 2000
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 500,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     autoplay: true,
                     autoplaySpeed: 2000
                 }
             }
+
         ]
     });
 
@@ -166,6 +167,10 @@ jQuery(document).ready(function () {
         e.preventDefault();
         $(this).parent().next().slideToggle(300);
         $(this).toggleClass("dark")
+    })
+
+    AOS.init({
+        duration: 800,
     })
 
 })

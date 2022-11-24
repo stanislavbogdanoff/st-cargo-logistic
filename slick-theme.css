@@ -130,7 +130,7 @@
 .slick-dots li {
     position: relative;
     display: inline-block;
-    padding: 5px;
+    padding: 7px;
     height: 22px;
     display: flex;
     justify-content: center;
@@ -138,6 +138,10 @@
     cursor: pointer;
     width: fit-content;
     transition: 0.3s;
+}
+
+.slick-dots li.slick-active {
+    padding: 10px;
 }
 
 .slick-dots li.slick-active button {
